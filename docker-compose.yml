@@ -1,0 +1,28 @@
+version: '3.3'
+
+services:
+   db:
+     image: mariadb:latest
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: openlcroot
+       MYSQL_DATABASE: openlc
+       MYSQL_USER: openlc
+       MYSQL_PASSWORD: openlc
+
+   openlcdemo:
+     depends_on:
+       - db
+     image: openlc/cms:latest
+     ports:
+       - "8080:80"
+     restart: always
+     environment:
+       DB_SERVER: db:3306
+       DB_USERNAME: openlc
+       DB_PASSWORD: openlc
+       DB_DATABASE: openlc
+volumes:
+    db_data: {}

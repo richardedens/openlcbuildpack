@@ -1,0 +1,1 @@
+php /c/phpDocumentor/phpDocumentor.phar -d . -t docs/api
