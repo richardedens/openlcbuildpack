@@ -1,0 +1,14 @@
+{
+    "name": "richa/openlcbuildpack",
+    "description": "The open low code buildpack.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gerhard Richard Edens",
+            "email": "richardedens@outlook.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
